@@ -151,7 +151,10 @@ nav {
   text-align: center;
 }
 
-/* Contact Section */
+.navigation-bar {
+  margin-left: 5rem;
+}
+
 .contact {
   padding: 2rem;
   background-color: #f5f5f5;
