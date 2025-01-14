@@ -170,6 +170,10 @@ nav {
   font-weight: bold;
 }
 
+.contact-form input {
+  height: 2rem;
+}
+
 .contact-form input,
 .contact-form textarea {
   padding: 0.75rem;

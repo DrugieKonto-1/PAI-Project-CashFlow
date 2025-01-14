@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import "../mocks/HomePage.css"
+import { MainPageForm } from './MainPageForm';
 
 export const HomePage = () => { 
   const [darkMode, setDarkMode] = useState(false);
@@ -58,24 +59,8 @@ export const HomePage = () => {
           <h3>About Cash Flow</h3>
           <p>At Cash Flow, we aim to simplify your financial journey with cutting-edge technology and seamless user experience.</p>
         </section>
-
         <section id="contact" className="contact">
-          <h3>Contact Us</h3>
-          <form className="contact-form">
-            <label>
-              Name:
-              <input type="text" placeholder="Your Name" />
-            </label>
-            <label>
-              Email:
-              <input type="email" placeholder="Your Email" />
-            </label>
-            <label>
-              Message:
-              <textarea placeholder="Your Message"></textarea>
-            </label>
-            <button type="submit" className="submit-button">Send</button>
-          </form>
+          <MainPageForm />
         </section>
       </main>
 
