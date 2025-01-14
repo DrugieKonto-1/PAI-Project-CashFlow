@@ -1,35 +1,88 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn mor SPERMA SPERMA SPERMA
-      </p>
-    </>
-  )
+    <div className={`App ${darkMode ? 'dark-mode' : 'light-mode'}`}>
+      <header className="App-header">
+        <div className="nav-bar">
+          <h1 className="brand-logo">Cash Flow</h1>
+          <button onClick={toggleDarkMode} className="toggle-mode">
+            {darkMode ? 'Light Mode' : 'Dark Mode'}
+          </button>
+          <nav>
+            <ul className="nav-links">
+              <li><a href="#features">Features</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section id="hero" className="hero">
+          <div className="hero-content">
+            <h2>Experience Seamless Banking</h2>
+            <p>Advanced financial tools at your fingertips.</p>
+            <button className="cta-button">Get Started</button>
+          </div>
+        </section>
+
+        <section id="features" className="features">
+          <h3>Our Features</h3>
+          <div className="feature-grid">
+            <div className="feature-item">
+              <h4>Real-Time Tracking</h4>
+              <p>Monitor your accounts with live updates.</p>
+            </div>
+            <div className="feature-item">
+              <h4>Secure Transactions</h4>
+              <p>Top-notch security for your peace of mind.</p>
+            </div>
+            <div className="feature-item">
+              <h4>Personalized Insights</h4>
+              <p>Get custom reports tailored to your needs.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="about" className="about">
+          <h3>About Cash Flow</h3>
+          <p>At Cash Flow, we aim to simplify your financial journey with cutting-edge technology and seamless user experience.</p>
+        </section>
+
+        <section id="contact" className="contact">
+          <h3>Contact Us</h3>
+          <form className="contact-form">
+            <label>
+              Name:
+              <input type="text" placeholder="Your Name" />
+            </label>
+            <label>
+              Email:
+              <input type="email" placeholder="Your Email" />
+            </label>
+            <label>
+              Message:
+              <textarea placeholder="Your Message"></textarea>
+            </label>
+            <button type="submit" className="submit-button">Send</button>
+          </form>
+        </section>
+      </main>
+
+      <footer className="App-footer">
+        <p>&copy; 2025 Cash Flow. Redefining Banking Experiences.</p>
+      </footer>
+    </div>
+  );
 }
 
-export default App
+export default App;
