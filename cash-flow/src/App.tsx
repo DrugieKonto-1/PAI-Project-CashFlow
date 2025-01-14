@@ -13,16 +13,17 @@ function App() {
       <header className="App-header">
         <div className="nav-bar">
           <h1 className="brand-logo">Cash Flow</h1>
-          <button onClick={toggleDarkMode} className="toggle-mode">
-            {darkMode ? 'Light Mode' : 'Dark Mode'}
-          </button>
           <nav>
             <ul className="nav-links">
               <li><a href="#features">Features</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>
+              <li><button onClick={toggleDarkMode} className="toggle-mode">
+                {darkMode ? 'Light Mode' : 'Dark Mode'}
+              </button></li>
             </ul>
           </nav>
+
         </div>
       </header>
 
