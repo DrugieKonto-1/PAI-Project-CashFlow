@@ -120,16 +120,15 @@ nav {
 .cta-button {
   background-color: #1e1e1e;
   color: #61dafb;
-  padding: 0.75rem 1.5rem;
-  border: 2px solid #61dafb;
-  border-radius: 5px;
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
   cursor: pointer;
   font-size: 1rem;
   transition: background-color 0.3s;
 }
 
 .cta-button:hover {
-  background-color: #61dafb;
+  background-color: #ef831d;
   color: white;
 }
 
@@ -358,4 +357,7 @@ body {
   text-align: center;
   transition: transform 0.3s;
   border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.logo {
+  width: 13rem;
 }
