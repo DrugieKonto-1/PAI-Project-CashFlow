@@ -36,6 +36,10 @@ export const HomePage = () => {
         </ul>
       </nav>
     </div>
+    <div>
+      <a href="LoginPage" className='Log-in'>Log in</a>
+      <a href="RegisterPage" className='Sign-up'>Sign up</a>
+    </div>
   </header>
 
       <main>

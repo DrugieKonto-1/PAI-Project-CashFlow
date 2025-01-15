@@ -35,8 +35,7 @@ export const MainPageForm = () => {
   return (
     <section id="contact" className="contact">
       <form className="contact-form" onSubmit={handleSubmit}>
-        <h4>
-          Name: <br />
+        <h4>Name: </h4>
           <input
             type="text"
             name="name"
@@ -47,7 +46,7 @@ export const MainPageForm = () => {
           {errors.name && <p className="error">{errors.name}</p>}
           <br />
 
-          Email: <br />
+          <h4>Email: </h4>
           <input
             type="email"
             name="email"
@@ -58,7 +57,7 @@ export const MainPageForm = () => {
           {errors.email && <p className="error">{errors.email}</p>}
           <br />
 
-          Message: <br />
+          <h4>Message: </h4>
           <textarea
             name="message"
             placeholder="Your Message"
@@ -67,7 +66,6 @@ export const MainPageForm = () => {
           />
           {errors.message && <p className="error">{errors.message}</p>}
           <br />
-        </h4>
         <button type="submit" className="submit-button">
           Send
         </button>
