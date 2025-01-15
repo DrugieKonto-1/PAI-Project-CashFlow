@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { HeroSection } from './HeroSection';
 import { navigation } from "../constants/links"
 import "../mocks/HomePage.css"
+import logo from '../assets/cashflow-logo1.png';
 
 export const Page1 = () => { 
   const [darkMode, setDarkMode] = useState(false);
@@ -15,7 +16,7 @@ export const Page1 = () => {
 
   <header className="App-header">
     <div className="nav-bar">
-      <h1 className="brand-logo">Cash Flow</h1>
+    <a href='/'><img className="logo" src={logo} /></a>
       <nav>
         <ul className="nav-links">
           <li>{navigation.map((item) => (

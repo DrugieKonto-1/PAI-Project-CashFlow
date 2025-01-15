@@ -1,5 +1,5 @@
 import Lottie from 'lottie-react';
-import animationData from '../assets/banking-animation.json'; // You'll need to add this JSON file
+import animationData from '../assets/banking-animation.json';
 
 export const HeroSection = () => (
   <section id="hero" className="hero">
