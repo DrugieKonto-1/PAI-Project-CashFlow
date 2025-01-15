@@ -1,7 +1,9 @@
 import { useState } from 'react';
-import { HeroSection } from './HeroSection';
 import { navigation } from "../constants/links"
 import "../mocks/HomePage.css"
+import logo from '../assets/cashflow-logo1.png';
+import Lottie from 'lottie-react';
+import animationData from '../assets/banking-animation.json';
 
 export const StartPage = () => { 
   const [darkMode, setDarkMode] = useState(false);
@@ -15,7 +17,7 @@ export const StartPage = () => {
 
   <header className="App-header">
     <div className="nav-bar">
-      <h1 className="brand-logo">Cash Flow</h1>
+    <a href='/'><img className="logo" src={logo} /></a>
       <nav>
         <ul className="nav-links">
           <li>{navigation.map((item) => (
@@ -40,9 +42,20 @@ export const StartPage = () => {
   </header>
 
       <main>
-        <div className="hero-features-container">
-          <HeroSection />
-        </div>
+      <section id="hero" className="hero">
+    <div className="hero-container">
+      <div className="hero-content">
+        <h2>Experience Seamless Banking</h2>
+        <p>Advanced financial tools at your fingertips.</p>
+      </div>
+      <div className="hero-animation">
+        <Lottie 
+          animationData={animationData}
+          style={{ width: 400, height: 400 }}
+        />
+      </div>
+    </div>
+  </section>
       </main>
 
       <footer className="App-footer">

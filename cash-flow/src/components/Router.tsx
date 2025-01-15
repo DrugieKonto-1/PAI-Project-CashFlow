@@ -6,6 +6,8 @@ import { Page2 } from "./Page2"
 import { Page3 } from "./Page3"
 import { GetStarted } from "./GetStarted";
 import { NotFoundPage } from "./NotFoundPage";
+import { Loginpage } from "./LoginPage";
+import { Registerpage } from "./RegisterPage";
 
 
 const router = createBrowserRouter([
@@ -32,7 +34,16 @@ const router = createBrowserRouter([
 			{
 				path: LINKS.GETSTARTED,
 				element: <GetStarted />
-			}
+			},
+			{
+				path: LINKS.LOGINPAGE,
+				element: <Loginpage />
+			},
+			{
+				path: LINKS.REGISTERPAGE,
+				element: <Registerpage />
+			},
+			
 		],
 	},
 ]);
