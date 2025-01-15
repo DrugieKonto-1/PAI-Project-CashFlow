@@ -1,10 +1,12 @@
-export enum Links {
+export enum LINKS {
 	HOME = "/",
-	CHUJ = "/chuj",
+	PAGE1 = "/PAGE1",
+  PAGE2 = "PAGE2",
+  PAGE3 = "PAGE3",
 }
 
-/*
 export const navigation = [
-	{ name: "Example", href: "Example1" },
+	{ name: "PAGE1", href: "/PAGE1"},
+  { name: "PAGE2", href: "/PAGE2"},
+  { name: "PAGE3", href: "/PAGE3"},
 ];
-*/
