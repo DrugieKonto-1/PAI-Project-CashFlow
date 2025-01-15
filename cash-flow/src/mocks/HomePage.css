@@ -85,7 +85,6 @@ nav {
   justify-content: center;
   align-items: center;
   height: 80vh;
-  background: linear-gradient(135deg, #61dafb, #054558);
   color: white;
   text-align: center;
   padding: 2rem;
@@ -117,30 +116,92 @@ nav {
   color: white;
 }
 
-/* Features Section */
-.features {
-  padding: 2rem;
-  background-color: #f5f5f5;
-  color: #333;
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
+.hero-content {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.hero-animation {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hero-content {
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Remove the background from features section since we'll use the hero's background */
+.features {
+  padding: 2rem;
+  color: white;
+}
+
+/* Add the gradient to a parent container that wraps both hero and features */
+.hero, .features {
+  padding: 2rem;
+  color: white;
+}
+
+/* Remove any individual backgrounds */
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .feature-item {
-  background: white;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
   border-radius: 10px;
   padding: 1.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .feature-item:hover {
   transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.features h3 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.feature-item h4 {
+  color: white;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.feature-item p {
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* About Section */
@@ -243,4 +304,41 @@ body {
 .toggle-mode:hover {
   background-color: #61dafb;
   color: white;
+}
+
+/* Add the gradient to light mode */
+.light-mode .hero,
+.light-mode .features {
+  background: linear-gradient(135deg, #61dafb, #054558);
+  color: white;
+}
+
+/* Add a darker gradient for dark mode */
+.dark-mode .hero,
+.dark-mode .features {
+  background: linear-gradient(135deg, #2c5f6e, #031f28);
+  color: white;
+}
+
+/* Create a container that wraps both hero and features sections */
+.hero-features-container {
+  background: linear-gradient(135deg, #61dafb, #054558);
+  color: white;
+}
+
+/* Remove individual backgrounds */
+.hero, .features {
+  padding: 2rem;
+}
+
+/* Keep the glass effect for feature items */
+.feature-item {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
