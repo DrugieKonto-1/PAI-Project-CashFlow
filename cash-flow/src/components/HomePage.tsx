@@ -1,6 +1,10 @@
 import { useState } from 'react';
-import "../mocks/HomePage.css"
 import { MainPageForm } from './MainPageForm';
+import { HeroSection } from './HeroSection';
+import { Features } from './Features';
+import { About } from './About'
+import { navigation } from "../constants/links"
+import "../mocks/HomePage.css"
 
 export const HomePage = () => { 
   const [darkMode, setDarkMode] = useState(false);
@@ -11,57 +15,40 @@ export const HomePage = () => {
 
   return (
     <div className={`App ${darkMode ? 'dark-mode' : 'light-mode'}`}>
-      <header className="App-header">
-        <div className="nav-bar">
-          <h1 className="brand-logo">Cash Flow</h1>
-          <nav>
-            <ul className="nav-links">
-              <li><a href="#features">Features</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li><button onClick={toggleDarkMode} className="toggle-mode">
-                {darkMode ? 'Light Mode' : 'Dark Mode'}
-              </button></li>
-            </ul>
-          </nav>
 
-        </div>
-      </header>
+  <header className="App-header">
+    <div className="nav-bar">
+      <h1 className="brand-logo">Cash Flow</h1>
+      <nav>
+        <ul className="nav-links">
+          <li>{navigation.map((item) => (
+							<a className='navigation-bar' key={item.name} href={item.href}
+							>
+								{item.name}
+							</a>
+						))}
+          </li>
+          <li>
+            <button onClick={toggleDarkMode} className="toggle-mode">
+              {darkMode ? 'Light Mode' : 'Dark Mode'}
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div>
+      <a href="LoginPage" className='Log-in'>Log in</a>
+      <a href="RegisterPage" className='Sign-up'>Sign up</a>
+    </div>
+  </header>
 
       <main>
-        <section id="hero" className="hero">
-          <div className="hero-content">
-            <h2>Experience Seamless Banking</h2>
-            <p>Advanced financial tools at your fingertips.</p>
-            <button className="cta-button">Get Started</button>
-          </div>
-        </section>
-
-        <section id="features" className="features">
-          <h3>Our Features</h3>
-          <div className="feature-grid">
-            <div className="feature-item">
-              <h4>Real-Time Tracking</h4>
-              <p>Monitor your accounts with live updates.</p>
-            </div>
-            <div className="feature-item">
-              <h4>Secure Transactions</h4>
-              <p>Top-notch security for your peace of mind.</p>
-            </div>
-            <div className="feature-item">
-              <h4>Personalized Insights</h4>
-              <p>Get custom reports tailored to your needs.</p>
-            </div>
-          </div>
-        </section>
-
-        <section id="about" className="about">
-          <h3>About Cash Flow</h3>
-          <p>At Cash Flow, we aim to simplify your financial journey with cutting-edge technology and seamless user experience.</p>
-        </section>
-        <section id="contact" className="contact">
-          <MainPageForm />
-        </section>
+        <div className="hero-features-container">
+          <HeroSection />
+          <Features />
+        </div>
+        <About />
+        <MainPageForm />
       </main>
 
       <footer className="App-footer">

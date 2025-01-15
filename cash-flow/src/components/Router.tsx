@@ -1,20 +1,33 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Links } from "../constants/links";
+import { LINKS } from "../constants/links";
 import { HomePage } from "./HomePage"
-import { Chuj } from "./Chuj"
+import { Page1 } from "./Page1"
+import { Page2 } from "./Page2"
+import { Page3 } from "./Page3"
+import { NotFoundPage } from "./NotFoundPage";
 
 
 const router = createBrowserRouter([
 	{
 		children: [
-			{ 
-        path: Links.CHUJ,
-        element: <Chuj />
+			{
+				path: '*',
+				element: <NotFoundPage />,
 			},
       {
-        path: Links.HOME,
+        path: LINKS.HOME,
         element: <HomePage />
-      }
+      },
+			{ 
+        path: LINKS.PAGE1,
+        element: <Page1 />
+			},			{ 
+        path: LINKS.PAGE2,
+        element: <Page2 />
+			},			{ 
+        path: LINKS.PAGE3,
+        element: <Page3 />
+			},
 		],
 	},
 ]);
