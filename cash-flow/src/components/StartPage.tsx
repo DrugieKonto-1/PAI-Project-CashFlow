@@ -3,7 +3,7 @@ import { HeroSection } from './HeroSection';
 import { navigation } from "../constants/links"
 import "../mocks/HomePage.css"
 
-export const Page2 = () => { 
+export const StartPage = () => { 
   const [darkMode, setDarkMode] = useState(false);
 
   const toggleDarkMode = () => {

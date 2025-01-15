@@ -3,6 +3,8 @@ export enum LINKS {
 	PAGE1 = "/PAGE1",
   PAGE2 = "PAGE2",
   PAGE3 = "PAGE3",
+  GETSTARTED = "/Start",
+  
 }
 
 export const navigation = [
