@@ -7,7 +7,7 @@ export const HeroSection = () => (
       <div className="hero-content">
         <h2>Experience Seamless Banking</h2>
         <p>Advanced financial tools at your fingertips.</p>
-        <button className="cta-button">Get Started</button>
+        <a href="/Start" className="cta-button">Get Started</a>
       </div>
       <div className="hero-animation">
         <Lottie 
