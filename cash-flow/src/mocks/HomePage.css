@@ -340,6 +340,7 @@ body {
 /* Create a container that wraps both hero and features sections */
 .hero-features-container {
   background: linear-gradient(135deg, #61dafb, #054558);
+  position: relative;
   color: white;
 }
 
