@@ -227,6 +227,18 @@ nav {
   background-color: #1e1e1e;
   color: white;
   text-align: center;
+  margin-top: 2rem; /* Add spacing from form */
+}
+
+.about h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about p {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
 .navigation-bar {
@@ -235,8 +247,10 @@ nav {
 
 .contact {
   padding: 2rem;
-  background-color: #f5f5f5;
-  color: #333;
+  background: transparent;
+  color: white;
+  position: relative;
+  z-index: 1;
 }
 
 .contact-form {
@@ -245,6 +259,11 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .contact-form label {
@@ -261,6 +280,15 @@ nav {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .contact-form button {
@@ -342,6 +370,7 @@ body {
   background: linear-gradient(135deg, #61dafb, #054558);
   position: relative;
   color: white;
+  padding-bottom: 0; /* Remove bottom padding */
 }
 
 /* Remove individual backgrounds */
@@ -484,6 +513,7 @@ body {
   color: white;
   padding: 0;
   margin: 0;
+  padding-bottom: 2rem; /* Dodaj padding na dole */
 }
 
 /* Dark mode specific styles */
@@ -503,4 +533,57 @@ body {
 .hero-animation {
   position: relative;
   z-index: 2;
+}
+
+.dark-mode .contact-form input,
+.dark-mode .contact-form textarea {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Add this to wrap both hero and contact sections */
+.page-wrapper {
+  background: linear-gradient(135deg, #61dafb, #054558);
+  min-height: 100vh;
+  width: 100%;
+  color: white;
+}
+
+/* Dark mode */
+.dark-mode .page-wrapper {
+  background: linear-gradient(135deg, #2c5f6e, #031f28);
+}
+
+/* Remove any existing backgrounds */
+.hero-features-container {
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styl dla sekcji kontaktowej */
+.contact {
+  background: transparent; /* Usuń tło */
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Dostosuj style formularza */
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 2rem;
+  color: white;
+}
+
+/* Style dla inputów */
+.contact-form input,
+.contact-form textarea {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
 }

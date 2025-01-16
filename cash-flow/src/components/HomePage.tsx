@@ -47,9 +47,9 @@ export const HomePage = () => {
         <div className="hero-features-container">
           <HeroSection />
           <Features />
+          <MainPageForm />
+          <About />
         </div>
-        <About />
-        <MainPageForm />
       </main>
 
       <footer className="App-footer">
