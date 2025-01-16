@@ -68,23 +68,11 @@ export const LoginPage = () => {
     <>
       <form onSubmit={handleSubmit}>
         <div>
-          <input
-            type="email"
-            name="email"
-            placeholder="Email..."
-            value={formData.email}
-            onChange={handleChange}
-          />
+          <input type="email" name="email" placeholder="Email..." value={formData.email} onChange={handleChange}/>
           {errors.email && <p style={{ color: "red" }}>{errors.email}</p>}
         </div>
         <div>
-          <input
-            type="password"
-            name="password"
-            placeholder="Password..."
-            value={formData.password}
-            onChange={handleChange}
-          />
+          <input type="password" name="password" placeholder="Password..." value={formData.password} onChange={handleChange}/>
           {errors.password && <p style={{ color: "red" }}>{errors.password}</p>}
         </div>
         <button type="submit">Submit</button>
