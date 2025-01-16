@@ -40,7 +40,7 @@ body {
   transition: color 0.3s;
 } 
 .Sign-up:hover, .Log-in:hover {
-  color: #61dafb;
+  color: #ff5722;
 }
 
 .nav-bar {
@@ -229,8 +229,23 @@ nav {
   text-align: center;
 }
 
-.navigation-bar {
-  margin-left: 5rem;
+.navigation-bar-buttons {
+  background-color: transparent;
+  margin-left:2rem;
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
+  cursor: pointer;
+  text-align: center !important; 
+  font-size: 1rem;
+  transition: background-color 0.4s ease-in-out;
+}
+.navigation-bar-buttons:hover {
+  opacity: ;
+  background-color: #ff5722;
+}
+
+.nav-list navigation-bar-buttons a:hover {
+  color: white !important;
 }
 
 .contact {

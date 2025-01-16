@@ -21,10 +21,9 @@ export const StartPage = () => {
       <nav>
         <ul className="nav-links">
           <li>{navigation.map((item) => (
-							<a className='navigation-bar' key={item.name} href={item.href}
-							>
+							<button className='navigation-bar-buttons'><a className='navigation-bar' key={item.name} href={item.href}>
 								{item.name}
-							</a>
+							</a></button>
 						))}
           </li>
           <li>

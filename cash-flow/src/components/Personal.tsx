@@ -4,7 +4,7 @@ import { navigation } from "../constants/links"
 import "../mocks/HomePage.css"
 import logo from '../assets/cashflow-logo1.png';
 
-export const Page3 = () => { 
+export const Personal = () => { 
   const [darkMode, setDarkMode] = useState(false);
 
   const toggleDarkMode = () => {
@@ -19,11 +19,10 @@ export const Page3 = () => {
     <a href='/'><img className="logo" src={logo} /></a>
       <nav>
         <ul className="nav-links">
-          <li>{navigation.map((item) => (
-							<a className='navigation-bar' key={item.name} href={item.href}
-							>
+        <li>{navigation.map((item) => (
+							<button className='navigation-bar-buttons'><a className='navigation-bar' key={item.name} href={item.href}>
 								{item.name}
-							</a>
+							</a></button>
 						))}
           </li>
           <li>
@@ -52,3 +51,4 @@ export const Page3 = () => {
     </div>
   );
 }
+
