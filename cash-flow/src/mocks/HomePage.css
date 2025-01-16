@@ -362,3 +362,40 @@ body {
 .logo {
   width: 13rem;
 }
+
+.not-found {
+  background-color: white;
+  text-align: center;
+  padding: 2rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.not-found h1 {
+  font-size: 4rem;
+  margin-bottom: 0rem;
+}
+
+.not-found p {
+  font-size: 1.5rem;
+}
+
+.home-link {
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: ease-in-out 0.3s;
+  background-color: cornflowerblue;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  margin-bottom: 5rem;
+}
+
+.home-link:hover {
+  color: #ffffff;
+  background-color: gray;
+}
