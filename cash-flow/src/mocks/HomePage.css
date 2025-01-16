@@ -399,3 +399,107 @@ body {
   color: #ffffff;
   background-color: gray;
 }
+
+/* Add the background image to a parent container that wraps both hero and features */
+.hero-features-container {
+  background: url('../assets/background.jpg') no-repeat center center;
+  background-size: cover;
+  color: white;
+}
+
+/* Add the background image to light mode */
+.light-mode .hero,
+.light-mode .features {
+  background: url('../assets/background.jpg') no-repeat center center;
+  background-size: cover;
+  color: white;
+}
+
+/* Add a darker overlay for dark mode */
+.dark-mode .hero,
+.dark-mode .features {
+  background: url('../assets/background.jpg') no-repeat center center;
+  background-size: cover;
+  color: white;
+  position: relative;
+}
+
+.dark-mode .hero::before,
+.dark-mode .features::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: 1;
+}
+
+.dark-mode .hero *,
+.dark-mode .features * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Remove individual backgrounds from hero and features sections */
+.hero, .features {
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+  background: none; /* Remove individual backgrounds */
+}
+
+/* Add background to the container that wraps both sections */
+.hero-features-container {
+  background: linear-gradient(135deg, #61dafb, #054558);
+  position: relative;
+  color: white;
+}
+
+/* Dark mode styling */
+.dark-mode .hero-features-container {
+  background: linear-gradient(135deg, #2c5f6e, #031f28);
+}
+
+/* Light mode styling */
+.light-mode .hero-features-container {
+  background: linear-gradient(135deg, #61dafb, #054558);
+}
+
+/* Remove all previous background-related styles */
+.hero, .features {
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Style the container wrapper */
+.hero-features-container {
+  position: relative;
+  background: linear-gradient(135deg, #61dafb, #054558);
+  width: 100%;
+  height: 100%;
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+/* Dark mode specific styles */
+.dark-mode .hero-features-container {
+  background: linear-gradient(135deg, #2c5f6e, #031f28);
+}
+
+/* Remove any conflicting background properties */
+.light-mode .hero,
+.light-mode .features,
+.dark-mode .hero,
+.dark-mode .features {
+  background: none;
+}
+
+/* Ensure the hero animation stays on top */
+.hero-animation {
+  position: relative;
+  z-index: 2;
+}
