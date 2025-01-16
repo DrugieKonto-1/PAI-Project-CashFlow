@@ -1,4 +1,5 @@
 import Lottie from 'lottie-react';
+import { Link } from 'react-router-dom';
 import animationData from '../assets/banking-animation.json';
 
 export const HeroSection = () => (
@@ -7,7 +8,7 @@ export const HeroSection = () => (
       <div className="hero-content">
         <h2>Experience Seamless Banking</h2>
         <p>Advanced financial tools at your fingertips.</p>
-        <a href="/Start" className="cta-button">Get Started</a>
+        <Link to="/Start" className="cta-button">Get Started</Link>
       </div>
       <div className="hero-animation">
         <Lottie 

@@ -48,6 +48,7 @@ body {
   justify-content: space-between; /* Rozdziela elementy logo i nawigację */
   align-items: center;
   padding: 1rem 2rem;
+  background-color: #1e1e1e;
 }
 
 .brand-logo {
@@ -77,9 +78,9 @@ body {
 
 .toggle-mode {
   background: none;
-  border: 2px solid #61dafb;
+  border: 2px solid ;
   padding: 0.5rem 1rem;
-  color: #61dafb;
+  color: #ff5722;
   cursor: pointer;
   border-radius: 5px;
   transition: background-color 0.3s;
@@ -87,8 +88,9 @@ body {
 }
 
 .toggle-mode:hover {
-  background-color: #61dafb;
-  color: white;
+  background-color: #ff5722;
+  color: white; 
+  border-color: rgb(112, 95, 95);
 }
 
 /* Move nav and toggle-mode next to each other */
@@ -250,14 +252,11 @@ nav {
   text-align: center !important; 
   font-size: 1rem;
   transition: background-color 0.4s ease-in-out;
-}
-.navigation-bar-buttons:hover {
-  opacity: ;
-  background-color: #ff5722;
+  border: none;
 }
 
-.nav-list navigation-bar-buttons a:hover {
-  color: white !important;
+.navigation-bar-buttons:hover {
+  background-color: #ff5722;
 }
 
 .contact {
@@ -349,21 +348,6 @@ body {
 
 .nav-links li {
   list-style: none;
-}
-
-.toggle-mode {
-  background: none;
-  border: 2px solid #61dafb;
-  padding: 0.5rem 1rem;
-  color: #61dafb;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.toggle-mode:hover {
-  background-color: #61dafb;
-  color: white;
 }
 
 /* Add the gradient to light mode */

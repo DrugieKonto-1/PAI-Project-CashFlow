@@ -1,4 +1,5 @@
 import { useState, FormEvent } from "react";
+import { Link } from "react-router-dom";
 
 interface FormData {
   email: string;
@@ -103,7 +104,7 @@ export const RegisterPage = () => {
         </div>
         <button type="submit">Submit</button>
       </form>
-      <a href="/">Powrót</a>
+      <Link to="/">Powrót</Link>
     </>
   );
 };

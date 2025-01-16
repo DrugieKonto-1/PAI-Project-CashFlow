@@ -1,5 +1,6 @@
 import Lottie from 'lottie-react';
 import animationData from '../assets/not-found-animation.json';
+import { Link } from 'react-router-dom';
 
 export const NotFoundPage = () => {
   return (
@@ -7,9 +8,9 @@ export const NotFoundPage = () => {
       <div className="animation-container">
         <Lottie animationData={animationData} style={{ width: 700, height: 700 }} />
       </div>
-      <a href="/" className="home-link">
-        Wroc go strony głownej.
-      </a>
+      <Link to="/" className="home-link">
+        Come back to the main page.
+      </Link>
     </div>
   );
 };
