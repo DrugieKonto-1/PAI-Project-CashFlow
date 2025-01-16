@@ -1,9 +1,12 @@
+import Lottie from 'lottie-react';
+import animationData from '../assets/not-found-animation.json';
 
 export const NotFoundPage = () => {
   return (
     <div className="not-found">
-      <h1>Page not found</h1>
-      <p>Sorry, we can't find the page you are looking for.</p>
+      <div className="animation-container">
+        <Lottie animationData={animationData} style={{ width: 700, height: 700 }} />
+      </div>
       <a href="/" className="home-link">
       <button className="cta-button">Return to homepage</button>
       </a>

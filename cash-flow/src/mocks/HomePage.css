@@ -25,7 +25,8 @@ body {
 }
 
 .Sign-up {
-  margin-left: 11.2rem;
+  margin-left: 5rem;
+  margin-right: 6rem;
   text-decoration: none;
   color: white;
   font-weight: bold;
@@ -125,16 +126,15 @@ nav {
 .cta-button {
   background-color: #1e1e1e;
   color: #61dafb;
-  padding: 0.75rem 1.5rem;
-  border: 2px solid #61dafb;
-  border-radius: 5px;
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
   cursor: pointer;
   font-size: 1rem;
   transition: background-color 0.3s;
 }
 
 .cta-button:hover {
-  background-color: #61dafb;
+  background-color: #ef831d;
   color: white;
 }
 
@@ -363,4 +363,148 @@ body {
   text-align: center;
   transition: transform 0.3s;
   border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.logo {
+  width: 13rem;
+}
+
+.not-found {
+  background-color: white;
+  text-align: center;
+  padding: 2rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.not-found h1 {
+  font-size: 4rem;
+  margin-bottom: 0rem;
+}
+
+.not-found p {
+  font-size: 1.5rem;
+}
+
+.home-link {
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: ease-in-out 0.3s;
+  background-color: cornflowerblue;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  margin-bottom: 5rem;
+}
+
+.home-link:hover {
+  color: #ffffff;
+  background-color: gray;
+}
+
+/* Add the background image to a parent container that wraps both hero and features */
+.hero-features-container {
+  background: url('../assets/background.jpg') no-repeat center center;
+  background-size: cover;
+  color: white;
+}
+
+/* Add the background image to light mode */
+.light-mode .hero,
+.light-mode .features {
+  background: url('../assets/background.jpg') no-repeat center center;
+  background-size: cover;
+  color: white;
+}
+
+/* Add a darker overlay for dark mode */
+.dark-mode .hero,
+.dark-mode .features {
+  background: url('../assets/background.jpg') no-repeat center center;
+  background-size: cover;
+  color: white;
+  position: relative;
+}
+
+.dark-mode .hero::before,
+.dark-mode .features::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: 1;
+}
+
+.dark-mode .hero *,
+.dark-mode .features * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Remove individual backgrounds from hero and features sections */
+.hero, .features {
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+  background: none; /* Remove individual backgrounds */
+}
+
+/* Add background to the container that wraps both sections */
+.hero-features-container {
+  background: linear-gradient(135deg, #61dafb, #054558);
+  position: relative;
+  color: white;
+}
+
+/* Dark mode styling */
+.dark-mode .hero-features-container {
+  background: linear-gradient(135deg, #2c5f6e, #031f28);
+}
+
+/* Light mode styling */
+.light-mode .hero-features-container {
+  background: linear-gradient(135deg, #61dafb, #054558);
+}
+
+/* Remove all previous background-related styles */
+.hero, .features {
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Style the container wrapper */
+.hero-features-container {
+  position: relative;
+  background: linear-gradient(135deg, #61dafb, #054558);
+  width: 100%;
+  height: 100%;
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+/* Dark mode specific styles */
+.dark-mode .hero-features-container {
+  background: linear-gradient(135deg, #2c5f6e, #031f28);
+}
+
+/* Remove any conflicting background properties */
+.light-mode .hero,
+.light-mode .features,
+.dark-mode .hero,
+.dark-mode .features {
+  background: none;
+}
+
+/* Ensure the hero animation stays on top */
+.hero-animation {
+  position: relative;
+  z-index: 2;
 }
