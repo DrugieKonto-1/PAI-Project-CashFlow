@@ -2,10 +2,10 @@
 export const NotFoundPage = () => {
   return (
     <div className="not-found">
-      <h1>Nie znaleziono strony</h1>
-      <p>Przepraszamy, nie możemy znaleźć strony, której szukasz.</p>
+      <h1>Page not found</h1>
+      <p>Sorry, we can't find the page you are looking for.</p>
       <a href="/" className="home-link">
-        Wroc strony głownej.
+      <button className="cta-button">Return to homepage</button>
       </a>
     </div>
   );
