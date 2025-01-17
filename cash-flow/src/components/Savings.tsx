@@ -1,18 +1,14 @@
-import { useState } from 'react';
+import { useDarkMode } from '../Context/DarkModeContext';
 import { HeroSection } from './HeroSection';
 import { Header } from './Header';
 import "../mocks/HomePage.css"
 
 export const Savings = () => { 
-  const [darkMode, setDarkMode] = useState(false);
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
+  const { darkMode } = useDarkMode();
 
   return (
     <div className={`App ${darkMode ? 'dark-mode' : 'light-mode'}`}>
-      <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      <Header />
       <main>
         <div className="hero-features-container">
           <HeroSection />

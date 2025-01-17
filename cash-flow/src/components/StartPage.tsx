@@ -1,19 +1,15 @@
-import { useState } from 'react';
+import { useDarkMode } from '../Context/DarkModeContext';
 import { Header } from './Header';
 import '../mocks/HomePage.css';
 import Lottie from 'lottie-react';
 import animationData from '../assets/banking-animation.json';
 
 export const StartPage = () => {
-  const [darkMode, setDarkMode] = useState(false);
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
+  const { darkMode } = useDarkMode();
 
   return (
     <div className={`App ${darkMode ? 'dark-mode' : 'light-mode'}`}>
-      <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      <Header />
       <main>
         <div className="hero-features-container">
           <section id="hero" className="hero">
