@@ -1,5 +1,7 @@
 import { useState, FormEvent } from "react";
+import Lottie from 'lottie-react';
 import { Link } from "react-router-dom";
+import animationData from '../assets/Login-animation.json';
 
 interface FormData {
   email: string;
@@ -83,6 +85,12 @@ export const RegisterPage = () => {
 
   return (
     <>
+
+      <Lottie 
+        animationData={animationData}
+        style={{ width: 400, height: 400 }}
+      />
+
       <form onSubmit={handleSubmit}>
         <div>
           <input type="email" name="email" placeholder="Email..." value={formData.email} onChange={handleChange}/>
