@@ -2,7 +2,8 @@
   "dependencies": {
     "autoprefixer": "^10.4.20",
     "lottie-react": "^2.4.0",
-    "postcss": "^8.5.1"
+    "postcss": "^8.5.1",
+    "react-router-dom": "^7.1.2"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.17"
