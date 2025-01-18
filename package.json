@@ -1,6 +1,16 @@
 {
   "dependencies": {
+<<<<<<< HEAD
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
+=======
+    "autoprefixer": "^10.4.20",
+    "lottie-react": "^2.4.0",
+    "postcss": "^8.5.1",
+    "react-router-dom": "^7.1.2"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+>>>>>>> c654941541af55255a6dc3f9804a165bff9dfc54
   }
 }

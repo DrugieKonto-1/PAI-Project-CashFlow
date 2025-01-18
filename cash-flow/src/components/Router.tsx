@@ -1,13 +1,13 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { LINKS } from "../constants/links";
 import { HomePage } from "./HomePage"
-import { Page1 } from "./Page1"
-import { Page2 } from "./Page2"
-import { Page3 } from "./Page3"
+import { Personal } from "./Personal"
+import { Business } from "./Business"
+import { Savings } from "./Savings"
 import { GetStarted } from "./GetStarted";
 import { NotFoundPage } from "./NotFoundPage";
-import { Loginpage } from "./LoginPage";
-import { Registerpage } from "./RegisterPage";
+import { LoginPage } from "./LoginPage";
+import { RegisterPage } from "./RegisterPage";
 
 
 const router = createBrowserRouter([
@@ -22,14 +22,14 @@ const router = createBrowserRouter([
         element: <HomePage />
       },
 			{ 
-        path: LINKS.PAGE1,
-        element: <Page1 />
+        path: LINKS.PERSONAL,
+        element: <Personal />
 			},			{ 
-        path: LINKS.PAGE2,
-        element: <Page2 />
+        path: LINKS.BUSINESS,
+        element: <Business />
 			},			{ 
-        path: LINKS.PAGE3,
-        element: <Page3 />
+        path: LINKS.SAVINGS,
+        element: <Savings />
 			},
 			{
 				path: LINKS.GETSTARTED,
@@ -37,13 +37,13 @@ const router = createBrowserRouter([
 			},
 			{
 				path: LINKS.LOGINPAGE,
-				element: <Loginpage />
+				element: <LoginPage />
 			},
 			{
 				path: LINKS.REGISTERPAGE,
-				element: <Registerpage />
+				element: <RegisterPage />
 			},
-			
+
 		],
 	},
 ]);

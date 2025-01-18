@@ -1,15 +1,15 @@
 export enum LINKS {
 	HOME = "/",
-	PAGE1 = "/PAGE1",
-  PAGE2 = "PAGE2",
-  PAGE3 = "PAGE3",
+	PERSONAL = "/Personal",
+  BUSINESS = "Business",
+  SAVINGS = "Savings",
   GETSTARTED = "/Start",
   LOGINPAGE = "/LoginPage",
   REGISTERPAGE = "/RegisterPage",
 }
 
 export const navigation = [
-	{ name: "PAGE1", href: "/PAGE1"},
-  { name: "PAGE2", href: "/PAGE2"},
-  { name: "PAGE3", href: "/PAGE3"},
+	{ name: "Personal", href: "/Personal"},
+  { name: "Business", href: "/Business"},
+  { name: "Savings", href: "/Savings"},
 ];

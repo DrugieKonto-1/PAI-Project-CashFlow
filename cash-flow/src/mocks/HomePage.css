@@ -1,3 +1,64 @@
+<<<<<<< HEAD
+=======
+.popup-div {
+  display: flex;
+  justify-content: center;
+}
+.popup-div-inside {
+  display: flex;
+  margin-top: 2.5%;
+  justify-content: space-evenly;
+}
+ .popup-categories a {
+  color: #000 !important; 
+  transition: color 0.3s ease-in-out;
+}
+ .popup-categories  a:hover {
+  color: #ff5722 !important; 
+}
+.popup-categories {
+  font-weight: bold;
+}
+.popup-headliner {
+  font-weight: bold;
+}
+
+.popup-container {
+  position: fixed;
+  left: 0;
+  top: 5.4em;
+  width: 100vw;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup {
+  background: white;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+}
+
+.close-popup {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.close-popup:hover {
+  background: #ff1a1a;
+}
+
+
+/* Global Styles */
+>>>>>>> c654941541af55255a6dc3f9804a165bff9dfc54
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
@@ -39,7 +100,7 @@ body {
   transition: color 0.3s;
 } 
 .Sign-up:hover, .Log-in:hover {
-  color: #61dafb;
+  color: #ff5722;
 }
 
 .nav-bar {
@@ -47,6 +108,7 @@ body {
   justify-content: space-between; /* Rozdziela elementy logo i nawigację */
   align-items: center;
   padding: 1rem 2rem;
+  background-color: #1e1e1e;
 }
 
 .brand-logo {
@@ -76,9 +138,9 @@ body {
 
 .toggle-mode {
   background: none;
-  border: 2px solid #61dafb;
+  border: 2px solid ;
   padding: 0.5rem 1rem;
-  color: #61dafb;
+  color: #ff5722;
   cursor: pointer;
   border-radius: 5px;
   transition: background-color 0.3s;
@@ -86,8 +148,9 @@ body {
 }
 
 .toggle-mode:hover {
-  background-color: #61dafb;
-  color: white;
+  background-color: #ff5722;
+  color: white; 
+  border-color: rgb(112, 95, 95);
 }
 
 .not-found {
@@ -232,16 +295,41 @@ nav {
   background-color: #1e1e1e;
   color: white;
   text-align: center;
+  margin-top: 2rem; /* Add spacing from form */
 }
 
-.navigation-bar {
-  margin-left: 5rem;
+.about h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about p {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.navigation-bar-buttons {
+  background-color: transparent;
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
+  cursor: pointer;
+  text-align: center !important; 
+  font-size: 1rem;
+  transition: background-color 0.4s ease-in-out;
+  border: none;
+}
+
+.navigation-bar-buttons:hover {
+  background-color: #ff5722;
 }
 
 .contact {
   padding: 2rem;
-  background-color: #f5f5f5;
-  color: #333;
+  background: transparent;
+  color: white;
+  position: relative;
+  z-index: 1;
 }
 
 .contact-form {
@@ -250,6 +338,11 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .contact-form label {
@@ -266,6 +359,15 @@ nav {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .contact-form button {
@@ -313,21 +415,6 @@ body {
   list-style: none;
 }
 
-.toggle-mode {
-  background: none;
-  border: 2px solid #61dafb;
-  padding: 0.5rem 1rem;
-  color: #61dafb;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.toggle-mode:hover {
-  background-color: #61dafb;
-  color: white;
-}
-
 /* Add the gradient to light mode */
 .light-mode .hero,
 .light-mode .features {
@@ -341,13 +428,6 @@ body {
   background: linear-gradient(135deg, #2c5f6e, #031f28);
   color: white;
 }
-
-/* Create a container that wraps both hero and features sections */
-.hero-features-container {
-  background: linear-gradient(135deg, #61dafb, #054558);
-  color: white;
-}
-
 /* Remove individual backgrounds */
 .hero, .features {
   padding: 2rem;
@@ -406,11 +486,6 @@ body {
 }
 
 /* Add the background image to a parent container that wraps both hero and features */
-.hero-features-container {
-  background: url('../assets/background.jpg') no-repeat center center;
-  background-size: cover;
-  color: white;
-}
 
 /* Add the background image to light mode */
 .light-mode .hero,
@@ -469,7 +544,7 @@ body {
 
 /* Light mode styling */
 .light-mode .hero-features-container {
-  background: linear-gradient(135deg, #61dafb, #054558);
+  background: linear-gradient(120deg, rgba(0,0,0,1) 0%, rgba(255,156,46,1) 25%, rgba(255,83,0,1) 100%);
 }
 
 /* Remove all previous background-related styles */
@@ -488,6 +563,7 @@ body {
   color: white;
   padding: 0;
   margin: 0;
+  padding-bottom: 2rem; /* Dodaj padding na dole */
 }
 
 /* Dark mode specific styles */
@@ -507,4 +583,57 @@ body {
 .hero-animation {
   position: relative;
   z-index: 2;
+}
+
+.dark-mode .contact-form input,
+.dark-mode .contact-form textarea {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Add this to wrap both hero and contact sections */
+.page-wrapper {
+  background: linear-gradient(135deg, #61dafb, #054558);
+  min-height: 100vh;
+  width: 100%;
+  color: white;
+}
+
+/* Dark mode */
+.dark-mode .page-wrapper {
+  background: linear-gradient(135deg, #2c5f6e, #031f28);
+}
+
+/* Remove any existing backgrounds */
+.hero-features-container {
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styl dla sekcji kontaktowej */
+.contact {
+  background: transparent; /* Usuń tło */
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Dostosuj style formularza */
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 2rem;
+  color: white;
+}
+
+/* Style dla inputów */
+.contact-form input,
+.contact-form textarea {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
 }
