@@ -2,12 +2,19 @@ import { Link } from 'react-router-dom';
 import { navigation } from '../constants/links';
 import logo from '../assets/cashflow-logo1.png';
 import '../mocks/HomePage.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useDarkMode } from '../Context/DarkModeContext.tsx';
 
 export const Header = () => {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const { darkMode, toggleDarkMode } = useDarkMode();
+
+useEffect(() => {
+    if (hoveredItem) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }})
 
   return (
     <div className={`nav-bar ${darkMode ? 'dark-mode' : 'light-mode'}`}>
@@ -21,7 +28,7 @@ export const Header = () => {
               <Link className='navigation-bar' to={item.href}>
                 <button className='navigation-bar-buttons'>{item.name}</button>
               </Link>
-              {hoveredItem === item.name && (
+              {hoveredItem === item.name && (   
                 <div className="popup-container" onMouseLeave={() => setHoveredItem(null)}>
                   <div className="popup">
                     <div className='popup-div'>
