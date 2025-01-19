@@ -1,6 +1,17 @@
 .popup-div {
   display: flex;
-  justify-content: center;
+  justify-content: left;
+  margin-left: 12%;
+  margin-top: 1%;
+}
+.dark-mode #Arrow  {
+  visibility:collapse;
+}
+.dark-mode .popup {
+  background-color: #121212;
+}
+.dark-mode .popup-categories a{
+  color: white !important;
 }
 .popup-div-inside {
   display: flex;
@@ -10,23 +21,24 @@
  .popup-categories a {
   color: #000 !important; 
   transition: color 0.3s ease-in-out;
+  font-size: 1.5rem;
 }
  .popup-categories  a:hover {
   color: #ff5722 !important; 
 }
 .popup-categories {
   font-weight: bold;
+  font-size: 2rem;
 }
-.popup-headliner {
-  font-weight: bold;
+.popup-categories-paragraph {
+  font-size: 2.5rem;
 }
-
 .popup-container {
   position: fixed;
   left: 0;
   top: 5.4em;
   width: 100vw;
-  height: 70%;
+  height: 60%;
   display: flex;
   justify-content: center;
   align-items: center;

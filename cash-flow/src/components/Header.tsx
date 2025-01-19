@@ -4,6 +4,7 @@ import logo from '../assets/cashflow-logo1.png';
 import '../mocks/HomePage.css';
 import { useState, useEffect } from 'react';
 import { useDarkMode } from '../Context/DarkModeContext.tsx';
+import Arrow from '../assets/Arrow.png';
 
 export const Header = () => {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
@@ -32,26 +33,27 @@ useEffect(() => {
                 <div className="popup-container" onMouseLeave={() => setHoveredItem(null)}>
                   <div className="popup">
                     <div className='popup-div'>
-                      <h1 className='popup-headliner'>Discover Banking</h1> <br/>
+                      <h1 className='font-bold'>Discover Banking</h1> <br/>
+                      <img className="w-16 h-15" id='Arrow' src={Arrow} />
                     </div>
                     <div className='popup-div-inside'>
-                      <ul className='popup-categories'>Accounts
-                        <li><Link to=''>Checking</Link></li>
-                        <li><Link to=''>Savings</Link></li>
-                        <li><Link to=''>CDs</Link></li>
-                        <li><Link to=''>IRAs</Link></li>
+                      <ul className='popup-categories'><p className='popup-categories-paragraph'>Accounts</p>
+                        <li className='popup-options'><Link to='/'>Checking</Link></li>
+                        <li className='popup-options'><Link to='/'>Savings</Link></li>
+                        <li className='popup-options'><Link to='/'>CDs</Link></li>
+                        <li className='popup-options'><Link to='/'>IRAs</Link></li>
                       </ul><br/>
-                      <ul className='popup-categories'>Investments
-                        <li><Link to=''>Stocks</Link></li>
-                        <li><Link to=''>Bonds</Link></li>
-                        <li><Link to=''>Mutual Funds</Link></li>
-                        <li><Link to=''>ETFs</Link></li>
+                      <ul className='popup-categories'><p className='popup-categories-paragraph'>Investments</p>
+                        <li className='popup-options'><Link to='/'>Stocks</Link></li>
+                        <li className='popup-options'><Link to='/'>Bonds</Link></li>
+                        <li className='popup-options'><Link to='/'>Mutual Funds</Link></li>
+                        <li className='popup-options'><Link to='/'>ETFs</Link></li>
                       </ul><br/>
-                      <ul className='popup-categories'>Plans
-                        <li><Link to=''>Retirement</Link></li>
-                        <li><Link to=''>College</Link></li>
-                        <li><Link to=''>Home</Link></li>
-                        <li><Link to=''>Auto</Link></li>
+                      <ul className='popup-categories'><p className='popup-categories-paragraph'>Plans</p>
+                        <li className='popup-options'><Link to='/'>Retirement</Link></li>
+                        <li className='popup-options'><Link to='/'>College</Link></li>
+                        <li className='popup-options'><Link to='/'>Home</Link></li>
+                        <li className='popup-options'><Link to='/'>Auto</Link></li>
                       </ul>
                     </div>
                   </div>
