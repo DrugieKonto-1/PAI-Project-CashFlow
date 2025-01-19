@@ -1,0 +1,41 @@
+{
+  "user1": {
+    "id":1,
+    "firstname":"Munonye",
+    "lastname":"Kindson",
+    "password":"awsdfdDgdfgxd",
+    "email":"kany@gmail.com"
+  },
+
+  "user2":  {
+    "id":2,
+    "firstname":"Imolode",
+    "lastname":"Saffron",
+    "password":"12345678",
+    "email":"saffron@gmail.com"
+  },
+
+  "user3":  {
+    "id":3,
+    "firstname":"Munonye",
+    "lastname":"Othniel",
+    "password":"123321",
+    "email":"othniel@gmail.com"
+  },
+
+  "user4": {
+    "id":4,
+    "firstname":"Yuba",
+    "lastname":"Oleander",
+    "password":"Sigma123",
+    "email":"oleander@gmail.com"
+  },
+
+  "user5": {
+    "id":5,
+    "firstname":"Andrew",
+    "lastname":"Tate",
+    "password":"Skibidi",
+    "email":"Tate@gmail.com"
+  }
+}
