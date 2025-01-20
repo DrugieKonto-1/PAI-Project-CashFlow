@@ -5,10 +5,12 @@ import '../mocks/HomePage.css';
 import { useState, useEffect } from 'react';
 import { useDarkMode } from '../Context/DarkModeContext.tsx';
 import Arrow from '../assets/Arrow.png';
+import { useUser } from "../Context/UserContext.tsx";
 
 export const Header = () => {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const { darkMode, toggleDarkMode } = useDarkMode();
+  const { userData } = useUser();
 
 useEffect(() => {
     if (hoveredItem) {
@@ -73,6 +75,7 @@ useEffect(() => {
         <Link to="LoginPage" className='Log-in'>Log in</Link>
         <Link to="RegisterPage" className='Sign-up'>Sign up</Link>
       </div>
+      {userData && <p>Witaj, {userData.name} {userData.lastname}!</p>}
     </div>
   );
 };

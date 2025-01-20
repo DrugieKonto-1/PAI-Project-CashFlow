@@ -3,6 +3,7 @@ import Lottie from 'lottie-react';
 import { Link } from "react-router-dom";
 import animationData from '../assets/Login-animation.json';
 import '../mocks/HomePage.css';
+import { doCreateUserWithEmailAndPassword } from '../firebase/auth.js';
 
 // Interfejsy
 interface FormData {
@@ -66,16 +67,20 @@ export const RegisterPage = () => {
   };
 
   // Obsługa formularza
-  const handleSubmit = (event: FormEvent) => {
+  const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
     } else {
       setErrors({});
-      console.log("Form submitted successfully:", formData);
+      try {
+        await doCreateUserWithEmailAndPassword(formData.email, formData.password);
+        console.log("User added to Firebase:", formData);
+      } catch (error) {
+        console.error("Firebase error:", error);
+      }
 
-      // Reset forma
       setFormData({
         email: "",
         password: "",
@@ -83,8 +88,6 @@ export const RegisterPage = () => {
         name: "",
         gender: "",
       });
-
-      // Logika Rejestracji
     }
   };
 

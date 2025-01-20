@@ -1,8 +1,10 @@
 import { useState, FormEvent } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Lottie from "lottie-react";
-import animationData from '../assets/Login-animation.json';
-import '../mocks/HomePage.css';
+import animationData from "../assets/Login-animation.json";
+import "../mocks/HomePage.css";
+import { doSignInWithEmailAndPassword } from "../firebase/auth.js";
+import { useUser } from "../Context/UserContext.tsx";
 
 // interfejsy
 interface FormData {
@@ -24,6 +26,8 @@ export const LoginPage = () => {
   });
 
   const [errors, setErrors] = useState<ValidationErrors>({});
+  const navigate = useNavigate();
+  const { setUserData } = useUser();
 
   const validate = (): ValidationErrors => {
     const newErrors: ValidationErrors = {};
@@ -43,21 +47,23 @@ export const LoginPage = () => {
     return newErrors;
   };
   // Obsluga danych
-  const handleSubmit = (event: FormEvent) => {
+  const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
     } else {
       setErrors({});
-      console.log("Form submitted successfully:", formData);
+      try {
+        // Próba logowania w Firebase
+        const userData = await doSignInWithEmailAndPassword(formData.email, formData.password);
 
-      setFormData({
-        email: "",
-        password: "",
-      });
-
-      // logika rejestracji dalej(Jakies przeslanie do API albo do db)
+        alert("Zalogowano pomyślnie");
+        setUserData({ name: "Imię", lastname: "Nazwisko" });
+        navigate("/");
+      } catch (error) {
+        setErrors({ email: "Nieprawidłowe dane logowania." });
+      }
     }
   };
 

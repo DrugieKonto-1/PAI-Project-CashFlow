@@ -1,10 +1,13 @@
-import { Router } from './Routing/Router.tsx';
-import { DarkModeProvider } from '../src/Context/DarkModeContext.tsx';
-// Strona wyswietlana
+import { DarkModeProvider } from "../src/Context/DarkModeContext.tsx";
+import { UserProvider } from "../Context/UserContext.tsx";
+import { Router } from "./Routing/Router.tsx";
+
 function App() {
   return (
     <DarkModeProvider>
-      <Router />
+      <UserProvider>
+        <Router />
+      </UserProvider>
     </DarkModeProvider>
   );
 }
