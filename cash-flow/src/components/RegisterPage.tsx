@@ -3,6 +3,7 @@ import Lottie from 'lottie-react';
 import { Link } from "react-router-dom";
 import animationData from '../assets/Login-animation.json';
 
+// Interfejsy
 interface FormData {
   email: string;
   password: string;
@@ -29,7 +30,7 @@ export const RegisterPage = () => {
   });
 
   const [errors, setErrors] = useState<ValidationErrors>({});
-
+// Weryfikacja danych
   const validate = (): ValidationErrors => {
     const newErrors: ValidationErrors = {};
 
@@ -61,7 +62,7 @@ export const RegisterPage = () => {
 
     return newErrors;
   };
-
+  // Obsługa formularza
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
     const validationErrors = validate();
@@ -71,6 +72,7 @@ export const RegisterPage = () => {
       setErrors({});
       console.log("Form submitted successfully:", formData);
 
+      // Reset forma
       setFormData({
         email: "",
         password: "",
@@ -79,7 +81,7 @@ export const RegisterPage = () => {
         gender: "",
       });
 
-      // Registration logic here (e.g., API or database submission)
+      // Logika Rejestracji
     }
   };
 
@@ -97,7 +99,8 @@ export const RegisterPage = () => {
         animationData={animationData}
         style={{ width: 400, height: 400 }}
       />
-
+      {// Formularz
+      }
       <form onSubmit={handleSubmit}>
         <div>
           <input type="email" name="email" placeholder="Email..." value={formData.email} onChange={handleChange}/>

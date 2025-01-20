@@ -11,7 +11,7 @@ export const FetchFile = () => {
   const [fileData, setFileData] = useState<{ [key: string]: User } | null>(null);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
+  useEffect(() => { //Fetch do pliku Api.json
     fetch('../../public/Api.json')
       .then((response) => response.json())
       .then((data) => {
@@ -24,7 +24,7 @@ export const FetchFile = () => {
       });
   }, []);
 
-  return (
+  return ( // Zwrot danych
     <div className="text-center p-8 font-sans">
       <h1 className="text-4xl mb-6 text-orange-500">Our Users</h1>
       {loading ? (

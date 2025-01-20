@@ -29,7 +29,7 @@ useEffect(() => {
               <Link className='navigation-bar' to={item.href}>
                 <button className='navigation-bar-buttons'>{item.name}</button>
               </Link>
-              {hoveredItem === item.name && (   
+              {hoveredItem === item.name && (    // Wyswietlenie popupu
                 <div className="popup-container" onMouseLeave={() => setHoveredItem(null)}>
                   <div className="popup">
                     <div className='popup-div'>
@@ -62,8 +62,9 @@ useEffect(() => {
             </li>
           ))}
           <li>
-            <button onClick={toggleDarkMode} className="toggle-mode">
-              {darkMode ? 'Light Mode' : 'Dark Mode'}
+            <button onClick={toggleDarkMode} className="toggle-mode"> 
+              {darkMode ? 'Light Mode' : 'Dark Mode' // Zmiana dark moda.
+              }
             </button>
           </li>
         </ul>

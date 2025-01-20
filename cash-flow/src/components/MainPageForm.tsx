@@ -1,5 +1,5 @@
 import { useState, FormEvent, ChangeEvent } from 'react';
-
+// interfejsy
 interface FormErrors {
   name?: string;
   email?: string;
@@ -19,7 +19,7 @@ export const MainPageForm = () => {
     const newErrors: FormErrors = {};
 
     if (!formData.name) newErrors.name = "Name is required.";
-    if (!formData.email || !/\S+@\S+\.\S+/.test(formData.email)) {
+    if (!formData.email || !/\S+@\S+\.\S+/.test(formData.email)) { //Weryfikacja/Walidacja
       newErrors.email = "Valid email is required.";
     }
     if (!formData.message) newErrors.message = "Message cannot be empty.";

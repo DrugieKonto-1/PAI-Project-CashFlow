@@ -1,7 +1,7 @@
 import Lottie from 'lottie-react';
 import { Link } from 'react-router-dom';
 import animationData from '../assets/banking-animation.json';
-
+// Sekcja Głowna
 export const HeroSection = () => (
   <section id="hero" className="hero">
     <div className="hero-container">

@@ -67,7 +67,6 @@
 }
 
 
-/* Global Styles */
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
@@ -84,7 +83,6 @@ body {
   color: #f5f5f5;
 }
 
-/* Header */
 .App-header {
   background-color: #1e1e1e;
   color: white;
@@ -114,7 +112,7 @@ body {
 
 .nav-bar {
   display: flex;
-  justify-content: space-between; /* Rozdziela elementy logo i nawigację */
+  justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
   background-color: #1e1e1e;
@@ -124,14 +122,14 @@ body {
   font-size: 1.8rem;
   font-weight: bold;
   color: #61dafb;
-  margin-right: auto; /* Logo pozostaje po lewej stronie */
+  margin-right: auto;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 1.5rem; /* Odstępy między elementami */
-  margin-left: auto; /* Przesuwa linki na prawą stronę */
+  gap: 1.5rem;
+  margin-left: auto;
 }
 
 .nav-links a {
@@ -162,13 +160,11 @@ body {
   border-color: rgb(112, 95, 95);
 }
 
-/* Move nav and toggle-mode next to each other */
 nav {
   display: flex;
   align-items: center;
 }
 
-/* Hero Section */
 .hero {
   display: flex;
   justify-content: center;
@@ -237,19 +233,16 @@ nav {
   }
 }
 
-/* Remove the background from features section since we'll use the hero's background */
 .features {
   padding: 2rem;
   color: white;
 }
 
-/* Add the gradient to a parent container that wraps both hero and features */
 .hero, .features {
   padding: 2rem;
   color: white;
 }
 
-/* Remove any individual backgrounds */
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -292,13 +285,12 @@ nav {
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* About Section */
 .about {
   padding: 2rem;
   background-color: #1e1e1e;
   color: white;
   text-align: center;
-  margin-top: 2rem; /* Add spacing from form */
+  margin-top: 2rem;
 }
 
 .about h3 {
@@ -388,7 +380,6 @@ nav {
   background-color: #1e1e1e;
 }
 
-/* Footer */
 .App-footer {
   text-align: center;
   padding: 1rem;
@@ -396,48 +387,45 @@ nav {
   color: white;
 }
 body {
-  background-color: #121212; /* Ciemne tło */
+  background-color: #121212;
 }
 .light-mode body {
-  background-color: #f5f5f5; /* Jasne tło */
+  background-color: #f5f5f5;
 }
 body {
   transition: background-color 0.3s ease;
 }
 .hero {
-  height: 100vh; /* Pełna wysokość ekranu */
+  height: 100vh;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 1.5rem; /* Odstępy między elementami */
+  gap: 1.5rem;
 }
 
 .nav-links li {
   list-style: none;
 }
 
-/* Add the gradient to light mode */
 .light-mode .hero,
 .light-mode .features {
   background: linear-gradient(135deg, #61dafb, #054558);
   color: white;
 }
 
-/* Add a darker gradient for dark mode */
 .dark-mode .hero,
 .dark-mode .contact,
 .dark-mode .features {
   background: linear-gradient(135deg, #2c5f6e, #031f28);
   color: white;
 }
-/* Remove individual backgrounds */
+
 .hero, .features {
   padding: 2rem;
 }
 
-/* Keep the glass effect for feature items */
 .feature-item {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
@@ -489,9 +477,6 @@ body {
   background-color: gray;
 }
 
-/* Add the background image to a parent container that wraps both hero and features */
-
-/* Add the background image to light mode */
 .light-mode .hero,
 .light-mode .features {
   background: url('../assets/background.jpg') no-repeat center center;
@@ -499,7 +484,6 @@ body {
   color: white;
 }
 
-/* Add a darker overlay for dark mode */
 .dark-mode .hero,
 .dark-mode .contact,
 .dark-mode .features {
@@ -515,7 +499,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
@@ -526,39 +510,33 @@ body {
   z-index: 2;
 }
 
-/* Remove individual backgrounds from hero and features sections */
 .hero, .features {
   padding: 2rem;
   position: relative;
   z-index: 1;
-  background: none; /* Remove individual backgrounds */
+  background: none;
 }
 
-/* Add background to the container that wraps both sections */
 .hero-features-container {
   background: linear-gradient(135deg, #61dafb, #054558);
   position: relative;
   color: white;
 }
 
-/* Dark mode styling */
 .dark-mode .hero-features-container {
   background: linear-gradient(135deg, #2c5f6e, #031f28);
 }
 
-/* Light mode styling */
 .light-mode .hero-features-container {
   background: linear-gradient(120deg, rgba(0,0,0,1) 0%, rgba(255,156,46,1) 25%, rgba(255,83,0,1) 100%);
 }
 
-/* Remove all previous background-related styles */
 .hero, .features {
   padding: 2rem;
   position: relative;
   z-index: 1;
 }
 
-/* Style the container wrapper */
 .hero-features-container {
   position: relative;
   background: rgba(0, 0, 0, 0.5);
@@ -567,15 +545,13 @@ body {
   color: white;
   padding: 0;
   margin: 0;
-  padding-bottom: 2rem; /* Dodaj padding na dole */
+  padding-bottom: 2rem;
 }
 
-/* Dark mode specific styles */
 .dark-mode .hero-features-container {
   background: linear-gradient(135deg, #2c5f6e, #031f28);
 }
 
-/* Remove any conflicting background properties */
 .light-mode .hero,
 .light-mode .features,
 .dark-mode .hero,
@@ -583,7 +559,6 @@ body {
   background: none;
 }
 
-/* Ensure the hero animation stays on top */
 .hero-animation {
   position: relative;
   z-index: 2;
@@ -595,8 +570,6 @@ body {
 }
 .dark-mode .contact {background: rgba(0, 0, 0, 0.5);}
 
-
-/* Add this to wrap both hero and contact sections */
 .page-wrapper {
   background: linear-gradient(135deg, #61dafb, #054558);
   min-height: 100vh;
@@ -604,27 +577,23 @@ body {
   color: white;
 }
 
-/* Dark mode */
 .dark-mode .page-wrapper {
   background: linear-gradient(135deg, #2c5f6e, #031f28);
 }
 
-/* Remove any existing backgrounds */
 .hero-features-container {
   background: transparent;
   display: flex;
   flex-direction: column;
 }
 
-/* Styl dla sekcji kontaktowej */
 .contact {
-  background: transparent; /* Usuń tło */
+  background: transparent;
   padding: 2rem;
   position: relative;
   z-index: 1;
 }
 
-/* Dostosuj style formularza */
 .contact-form {
   max-width: 500px;
   margin: 0 auto;
@@ -636,7 +605,6 @@ body {
   color: white;
 }
 
-/* Style dla inputów */
 .contact-form input,
 .contact-form textarea {
   background: rgba(255, 255, 255, 0.1);

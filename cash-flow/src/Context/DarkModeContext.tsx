@@ -1,5 +1,6 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
+// interfejsy
 interface DarkModeContextType {
   darkMode: boolean;
   toggleDarkMode: () => void;
@@ -16,7 +17,7 @@ export const DarkModeProvider = ({ children }: { children: ReactNode }) => {
   const toggleDarkMode = () => {
     setDarkMode((prevMode) => {
       const newMode = !prevMode;
-      localStorage.setItem('darkMode', JSON.stringify(newMode));
+      localStorage.setItem('darkMode', JSON.stringify(newMode)); // Zapis do local storage
       return newMode;
     });
   };

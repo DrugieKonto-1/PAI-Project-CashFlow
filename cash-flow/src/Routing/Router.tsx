@@ -1,15 +1,15 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { LINKS } from "../constants/links";
-import { HomePage } from "./HomePage"
-import { Personal } from "./Personal"
-import { Business } from "./Business"
-import { Savings } from "./Savings"
-import { GetStarted } from "./GetStarted";
-import { NotFoundPage } from "./NotFoundPage";
-import { LoginPage } from "./LoginPage";
-import { RegisterPage } from "./RegisterPage";
+import { HomePage } from "../components/HomePage"
+import { Personal } from "../components/Personal"
+import { Business } from "../components/Business"
+import { Savings } from "../components/Savings"
+import { GetStarted } from "../components/GetStarted";
+import { NotFoundPage } from "../components/NotFoundPage";
+import { LoginPage } from "../components/LoginPage";
+import { RegisterPage } from "../components/RegisterPage";
 
-
+// Routing
 const router = createBrowserRouter([
 	{
 		children: [

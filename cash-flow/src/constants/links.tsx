@@ -1,4 +1,4 @@
-export enum LINKS {
+export enum LINKS { //Stałe linki
 	HOME = "/",
 	PERSONAL = "/Personal",
   BUSINESS = "Business",
@@ -8,7 +8,7 @@ export enum LINKS {
   REGISTERPAGE = "/RegisterPage",
 }
 
-export const navigation = [
+export const navigation = [ //Nawigacja po stronie
 	{ name: "Personal", href: "/Personal"},
   { name: "Business", href: "/Business"},
   { name: "Savings", href: "/Savings"},

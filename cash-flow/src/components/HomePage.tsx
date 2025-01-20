@@ -4,7 +4,7 @@ import { Header } from './Header';
 import "../mocks/HomePage.css";
 import { useDarkMode } from '../Context/DarkModeContext.tsx';
 import { MainPageForm } from './MainPageForm.tsx';
-
+// Strona Główna
 export const HomePage = () => {
   const { darkMode } = useDarkMode();
 
