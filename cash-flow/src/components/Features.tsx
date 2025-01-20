@@ -6,6 +6,7 @@ export const Features = () => (
       <FeatureItem title="Secure Transactions" description="Top-notch security for your peace of mind." />
       <FeatureItem title="Personalized Insights" description="Get custom reports tailored to your needs." />
     </div>
+
   </section>
 );
 
