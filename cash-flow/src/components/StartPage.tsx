@@ -15,13 +15,13 @@ export const StartPage = () => {
           <section id="hero" className="hero">
             <div className="hero-container">
               <div className="hero-content">
-                <h2>Experience Seamless Banking</h2>
-                <p>Advanced financial tools at your fingertips.</p>
+                <h2>Join our community!</h2>
+                <p>Financial suppert at your disposal.</p>
               </div>
               <div className="hero-animation">
                 <Lottie
                   animationData={animationData}
-                  style={{ width: 400, height: 400 }}
+                  style={{ width: 500, height: 500 }}
                 />
               </div>
             </div>
