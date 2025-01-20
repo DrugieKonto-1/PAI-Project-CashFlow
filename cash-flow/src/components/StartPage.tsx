@@ -1,4 +1,5 @@
 import { useDarkMode } from '../Context/DarkModeContext';
+import SecondAnimationData from "../assets/inspect-animation.json";
 import { Header } from './Header';
 import '../mocks/HomePage.css';
 import Lottie from 'lottie-react';
@@ -23,9 +24,18 @@ export const StartPage = () => {
                   animationData={animationData}
                   style={{ width: 500, height: 500 }}
                 />
+                
               </div>
+              
             </div>
+            
           </section>
+          <div id='animation1' className="flex justify-center items-center mt-0">
+      <Lottie 
+        animationData={SecondAnimationData}
+        style={{ width: 500, height: 500 }}
+      />
+    </div>
         </div>
       </main>
     </div>
