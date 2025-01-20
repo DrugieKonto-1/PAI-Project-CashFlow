@@ -70,7 +70,7 @@ export const LoginPage = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container-form">
       <Lottie 
         animationData={animationData}
         style={{ width: 400, height: 400 }}
