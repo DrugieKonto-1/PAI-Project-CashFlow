@@ -4,7 +4,8 @@
     "firstname":"Munonye",
     "lastname":"Kindson",
     "password":"awsdfdDgdfgxd",
-    "email":"kany@gmail.com"
+    "email":"kany@gmail.com",
+    "gender": "Female"
   },
 
   "user2":  {
@@ -12,7 +13,8 @@
     "firstname":"Imolode",
     "lastname":"Saffron",
     "password":"12345678",
-    "email":"saffron@gmail.com"
+    "email":"saffron@gmail.com",
+    "gender": "Male"
   },
 
   "user3":  {
@@ -20,7 +22,8 @@
     "firstname":"Munonye",
     "lastname":"Othniel",
     "password":"123321",
-    "email":"othniel@gmail.com"
+    "email":"othniel@gmail.com",
+    "gender": "Female"
   },
 
   "user4": {
@@ -28,7 +31,8 @@
     "firstname":"Yuba",
     "lastname":"Oleander",
     "password":"Sigma123",
-    "email":"oleander@gmail.com"
+    "email":"oleander@gmail.com",
+    "gender": "Male"
   },
 
   "user5": {
@@ -36,6 +40,7 @@
     "firstname":"Andrew",
     "lastname":"Tate",
     "password":"Skibidi",
-    "email":"Tate@gmail.com"
+    "email":"Tate@gmail.com",
+    "gender": "Male"
   }
 }

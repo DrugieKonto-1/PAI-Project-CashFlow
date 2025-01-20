@@ -1,7 +1,14 @@
 import { useEffect, useState } from 'react';
 
+interface User {
+  id: string;
+  firstname: string;
+  lastname: string;
+  email: string;
+}
+
 export const FetchFile = () => {
-  const [fileData, setFileData] = useState(null);
+  const [fileData, setFileData] = useState<{ [key: string]: User } | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -27,24 +34,25 @@ export const FetchFile = () => {
           <table className="table-auto w-full border-separate border-spacing-2">
             <thead>
               <tr>
-                <th className="border-b-2 py-2 px-4 text-left-orange">User ID</th>
-                <th className="border-b-2 py-2 px-4 text-left-orange">First Name</th>
-                <th className="border-b-2 py-2 px-4 text-left-orange">Last Name</th>
+                <th className="border-b-2 py-2 px-4 text-left">User ID</th>
+                <th className="border-b-2 py-2 px-4 text-left">First Name</th>
+                <th className="border-b-2 py-2 px-4 text-left">Last Name</th>
                 <th className="border-b-2 py-2 px-4 text-left">Email</th>
               </tr>
             </thead>
             <tbody>
-              {Object.keys(fileData).map((userKey) => {
-                const user = fileData[userKey];
-                return (
-                  <tr key={user.id}>
-                    <td className="border-b py-2 px-4">{user.id}</td>
-                    <td className="border-b py-2 px-4">{user.firstname}</td>
-                    <td className="border-b py-2 px-4">{user.lastname}</td>
-                    <td className="border-b py-2 px-4">{user.email}</td>
-                  </tr>
-                );
-              })}
+              {fileData &&
+                Object.keys(fileData).map((userKey) => {
+                  const user = fileData[userKey];
+                  return (
+                    <tr key={user.id}>
+                      <td className="border-b py-2 px-4">{user.id}</td>
+                      <td className="border-b py-2 px-4">{user.firstname}</td>
+                      <td className="border-b py-2 px-4">{user.lastname}</td>
+                      <td className="border-b py-2 px-4">{user.email}</td>
+                    </tr>
+                  );
+                })}
             </tbody>
           </table>
         </div>

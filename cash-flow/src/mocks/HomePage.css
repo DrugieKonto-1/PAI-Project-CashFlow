@@ -427,6 +427,7 @@ body {
 
 /* Add a darker gradient for dark mode */
 .dark-mode .hero,
+.dark-mode .contact,
 .dark-mode .features {
   background: linear-gradient(135deg, #2c5f6e, #031f28);
   color: white;
@@ -500,13 +501,12 @@ body {
 
 /* Add a darker overlay for dark mode */
 .dark-mode .hero,
+.dark-mode .contact,
 .dark-mode .features {
-  background: url('../assets/background.jpg') no-repeat center center;
   background-size: cover;
   color: white;
   position: relative;
 }
-
 .dark-mode .hero::before,
 .dark-mode .features::before {
   content: '';
@@ -520,6 +520,7 @@ body {
 }
 
 .dark-mode .hero *,
+.dark-mode .contact,
 .dark-mode .features * {
   position: relative;
   z-index: 2;
@@ -560,7 +561,7 @@ body {
 /* Style the container wrapper */
 .hero-features-container {
   position: relative;
-  background: linear-gradient(135deg, #61dafb, #054558);
+  background: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%;
   color: white;
@@ -592,6 +593,8 @@ body {
 .dark-mode .contact-form textarea {
   background: rgba(255, 255, 255, 0.05);
 }
+.dark-mode .contact {background: rgba(0, 0, 0, 0.5);}
+
 
 /* Add this to wrap both hero and contact sections */
 .page-wrapper {
