@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export const FetchFile = () => {
   const [fileData, setFileData] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('../../public/Api.json') // Adjust path to the file if needed
+    fetch('../../public/Api.json')
       .then((response) => response.json())
       .then((data) => {
         setFileData(data);
