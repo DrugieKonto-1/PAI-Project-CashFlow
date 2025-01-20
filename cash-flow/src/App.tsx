@@ -1,5 +1,5 @@
-import { DarkModeProvider } from "../src/Context/DarkModeContext.tsx";
-import { UserProvider } from "../Context/UserContext.tsx";
+import { DarkModeProvider } from "./Context/DarkModeContext.tsx";
+import { UserProvider } from "./Context/UserContext.tsx";
 import { Router } from "./Routing/Router.tsx";
 
 function App() {
