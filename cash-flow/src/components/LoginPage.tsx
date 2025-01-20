@@ -2,6 +2,8 @@ import { useState, FormEvent } from "react";
 import { Link } from "react-router-dom";
 import Lottie from "lottie-react";
 import animationData from '../assets/Login-animation.json';
+import '../mocks/HomePage.css';
+
 // interfejsy
 interface FormData {
   email: string;
@@ -68,25 +70,24 @@ export const LoginPage = () => {
   };
 
   return (
-    <>
-
+    <div className="container">
       <Lottie 
         animationData={animationData}
         style={{ width: 400, height: 400 }}
       />
 
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="input-field">
           <input type="email" name="email" placeholder="Email..." value={formData.email} onChange={handleChange}/>
-          {errors.email && <p style={{ color: "red" }}>{errors.email}</p>}
+          {errors.email && <p className="error-message">{errors.email}</p>}
         </div>
-        <div>
+        <div className="input-field">
           <input type="password" name="password" placeholder="Password..." value={formData.password} onChange={handleChange}/>
-          {errors.password && <p style={{ color: "red" }}>{errors.password}</p>}
+          {errors.password && <p className="error-message">{errors.password}</p>}
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit" className="submit-button">Submit</button>
       </form>
-      <Link to="/">Powrót</Link>
-    </>
+      <Link to="/" className="back-link">Back</Link>
+    </div>
   );
 };

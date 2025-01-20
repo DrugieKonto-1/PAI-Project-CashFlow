@@ -2,6 +2,7 @@ import { useState, FormEvent } from "react";
 import Lottie from 'lottie-react';
 import { Link } from "react-router-dom";
 import animationData from '../assets/Login-animation.json';
+import '../mocks/HomePage.css';
 
 // Interfejsy
 interface FormData {
@@ -30,7 +31,8 @@ export const RegisterPage = () => {
   });
 
   const [errors, setErrors] = useState<ValidationErrors>({});
-// Weryfikacja danych
+
+  // Weryfikacja danych
   const validate = (): ValidationErrors => {
     const newErrors: ValidationErrors = {};
 
@@ -62,6 +64,7 @@ export const RegisterPage = () => {
 
     return newErrors;
   };
+
   // Obsługa formularza
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
@@ -94,44 +97,40 @@ export const RegisterPage = () => {
   };
 
   return (
-    <>
+    <div className="container">
       <Lottie 
         animationData={animationData}
         style={{ width: 400, height: 400 }}
       />
-      {// Formularz
-      }
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="input-field">
           <input type="email" name="email" placeholder="Email..." value={formData.email} onChange={handleChange}/>
-          {errors.email && <p style={{ color: "red" }}>{errors.email}</p>}
+          {errors.email && <p className="error-message">{errors.email}</p>}
         </div>
-        <div>
+        <div className="input-field">
           <input type="password" name="password" placeholder="Password..." value={formData.password} onChange={handleChange}/>
-          {errors.password && <p style={{ color: "red" }}>{errors.password}</p>}
+          {errors.password && <p className="error-message">{errors.password}</p>}
         </div>
-        <div>
+        <div className="input-field">
           <input type="text" name="phonenumber" placeholder="Phone Number..." value={formData.phonenumber} onChange={handleChange}/>
-          {errors.phonenumber && (
-            <p style={{ color: "red" }}>{errors.phonenumber}</p>
-          )}
+          {errors.phonenumber && <p className="error-message">{errors.phonenumber}</p>}
         </div>
-        <div>
+        <div className="input-field">
           <input type="text" name="name" placeholder="Name and Surname..." value={formData.name} onChange={handleChange}/>
-          {errors.name && <p style={{ color: "red" }}>{errors.name}</p>}
+          {errors.name && <p className="error-message">{errors.name}</p>}
         </div>
-        <div>
+        <div className="input-field">
           <select name="gender" value={formData.gender} onChange={handleChange}>
             <option value="">Select Gender...</option>
             <option value="male">Male</option>
             <option value="female">Female</option>
             <option value="other">Other</option>
           </select>
-          {errors.gender && <p style={{ color: "red" }}>{errors.gender}</p>}
+          {errors.gender && <p className="error-message">{errors.gender}</p>}
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit" className="submit-button">Register</button>
       </form>
-      <Link to="/">Powrót</Link>
-    </>
+      <Link to="/" className="back-link">Back</Link>
+    </div>
   );
 };
