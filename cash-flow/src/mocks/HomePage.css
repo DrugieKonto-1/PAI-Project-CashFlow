@@ -60,12 +60,12 @@
   color: white;
   border: none;
   cursor: pointer;
+
 }
 
 .close-popup:hover {
   background: #ff1a1a;
 }
-
 
 body {
   margin: 0;
@@ -140,7 +140,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: #61dafb;
+  color: black;
 }
 
 .toggle-mode {
@@ -159,6 +159,14 @@ body {
   color: white; 
   border-color: rgb(112, 95, 95);
 }
+
+.not-found {
+  background-color: #121212;
+  color: #f5f5f5;
+  text-align: center;
+  margin: 1rem 0;
+}
+
 
 nav {
   display: flex;
@@ -187,7 +195,7 @@ nav {
 
 .cta-button {
   background-color: #1e1e1e;
-  color: #61dafb;
+  color: #ef831d;
   padding: 0.75rem 2rem;
   border-radius: 30px;
   cursor: pointer;
@@ -367,7 +375,7 @@ nav {
 
 .contact-form button {
   padding: 0.75rem;
-  background-color: #61dafb;
+  background-color: #fb4812;
   border: none;
   color: white;
   font-size: 1rem;
@@ -411,7 +419,7 @@ body {
 
 .light-mode .hero,
 .light-mode .features {
-  background: linear-gradient(135deg, #61dafb, #054558);
+  background: linear-gradient(135 deg, #61dafb, #054558);
   color: white;
 }
 
