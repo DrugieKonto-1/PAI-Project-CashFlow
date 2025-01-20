@@ -8,7 +8,7 @@ export const NotFoundPage = () => {
       <div className="animation-container">
         <Lottie animationData={animationData} style={{ width: 700, height: 700 }} />
       </div>
-      <a href="/" className="home-link">
+      <a href="/">
       <button className="cta-button">Return to homepage</button>
       </a>
     </div>
