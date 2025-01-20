@@ -1,6 +1,6 @@
-import { Router } from './components/Router';
+import { Router } from './Routing/Router.tsx';
 import { DarkModeProvider } from '../src/Context/DarkModeContext.tsx';
-
+// Strona wyswietlana
 function App() {
   return (
     <DarkModeProvider>

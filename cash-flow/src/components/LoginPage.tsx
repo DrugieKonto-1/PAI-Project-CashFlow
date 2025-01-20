@@ -2,7 +2,7 @@ import { useState, FormEvent } from "react";
 import { Link } from "react-router-dom";
 import Lottie from "lottie-react";
 import animationData from '../assets/Login-animation.json';
-
+// interfejsy
 interface FormData {
   email: string;
   password: string;
@@ -25,7 +25,7 @@ export const LoginPage = () => {
 
   const validate = (): ValidationErrors => {
     const newErrors: ValidationErrors = {};
-
+    // Weryfikacja danych
     if (!formData.email.trim()) {
       newErrors.email = "Email is required.";
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
@@ -40,7 +40,7 @@ export const LoginPage = () => {
 
     return newErrors;
   };
-
+  // Obsluga danych
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
     const validationErrors = validate();

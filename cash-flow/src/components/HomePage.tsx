@@ -1,11 +1,10 @@
 import { HeroSection } from './HeroSection';
 import { Features } from './Features';
-import { About } from './About';
 import { Header } from './Header';
 import "../mocks/HomePage.css";
 import { useDarkMode } from '../Context/DarkModeContext.tsx';
 import { MainPageForm } from './MainPageForm.tsx';
-
+// Strona Główna
 export const HomePage = () => {
   const { darkMode } = useDarkMode();
 
@@ -17,7 +16,6 @@ export const HomePage = () => {
           <HeroSection />
           <Features />
           <MainPageForm />
-          <About />
         </div>
       </main>
       <footer className="App-footer">

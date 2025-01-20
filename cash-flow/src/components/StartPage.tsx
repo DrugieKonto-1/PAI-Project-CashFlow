@@ -28,9 +28,6 @@ export const StartPage = () => {
           </section>
         </div>
       </main>
-      <footer className="App-footer">
-        <p>&copy; 2025 Cash Flow. Redefining Banking Experiences.</p>
-      </footer>
     </div>
   );
 };
