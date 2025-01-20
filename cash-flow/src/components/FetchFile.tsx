@@ -24,32 +24,45 @@ export const FetchFile = () => {
       });
   }, []);
 
-  return ( // Zwrot danych
-    <div className="text-center p-8 font-sans">
-      <h1 className="text-4xl mb-6 text-orange-500">Our Users</h1>
+  return (
+    <div id="background-fetch" className="text-center p-8 font-sans min-h-screen">
+      <h1 className="text-4xl mb-6 text-white font-bold">Our Users</h1>
       {loading ? (
-        <p className="text-lg text-gray-500">Loading...</p>
+        <p className="text-lg text-gray-200 animate-pulse">Loading...</p>
       ) : (
-        <div className="overflow-x-auto max-w-full mx-auto">
-          <table className="table-auto w-full border-separate border-spacing-2">
-            <thead>
+        <div className="overflow-x-auto max-w-4xl mx-auto shadow-lg rounded-lg bg-white p-4">
+          <table className="table-auto w-full border-collapse">
+            <thead className="bg-orange-500 text-white">
               <tr>
-                <th className="border-b-2 py-2 px-4 text-left">User ID</th>
-                <th className="border-b-2 py-2 px-4 text-left">First Name</th>
-                <th className="border-b-2 py-2 px-4 text-left">Last Name</th>
-                <th className="border-b-2 py-2 px-4 text-left">Email</th>
+                <th className="py-3 px-4 text-left font-semibold">User ID</th>
+                <th className="py-3 px-4 text-left font-semibold">First Name</th>
+                <th className="py-3 px-4 text-left font-semibold">Last Name</th>
+                <th className="py-3 px-4 text-left font-semibold">Email</th>
               </tr>
             </thead>
             <tbody>
               {fileData &&
-                Object.keys(fileData).map((userKey) => {
+                Object.keys(fileData).map((userKey, index) => {
                   const user = fileData[userKey];
                   return (
-                    <tr key={user.id}>
-                      <td className="border-b py-2 px-4">{user.id}</td>
-                      <td className="border-b py-2 px-4">{user.firstname}</td>
-                      <td className="border-b py-2 px-4">{user.lastname}</td>
-                      <td className="border-b py-2 px-4">{user.email}</td>
+                    <tr
+                      key={user.id}
+                      className={`${
+                        index % 2 === 0 ? "bg-gray-100" : "bg-gray-50"
+                      } hover:bg-orange-100 transition duration200`}
+                    >
+                      <td className="border-b py-3 px-4 text-gray-800">
+                        {user.id}
+                      </td>
+                      <td className="border-b py-3 px-4 text-gray-800">
+                        {user.firstname}
+                      </td>
+                      <td className="border-b py-3 px-4 text-gray-800">
+                        {user.lastname}
+                      </td>
+                      <td className="border-b py-3 px-4 text-gray-800">
+                        {user.email}
+                      </td>
                     </tr>
                   );
                 })}

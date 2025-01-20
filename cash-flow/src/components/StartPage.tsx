@@ -4,6 +4,7 @@ import { Header } from './Header';
 import '../mocks/HomePage.css';
 import Lottie from 'lottie-react';
 import animationData from '../assets/banking-animation.json';
+import { FetchFile } from './FetchFile';
 
 export const StartPage = () => {
   const { darkMode } = useDarkMode();
@@ -36,6 +37,7 @@ export const StartPage = () => {
         style={{ width: 500, height: 500 }}
       />
     </div>
+    <FetchFile />
         </div>
       </main>
     </div>

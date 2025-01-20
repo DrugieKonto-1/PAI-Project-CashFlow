@@ -4,6 +4,9 @@
 .dark-mode #animation2 {
   background: rgba(0, 0, 0, 0.5);
 }
+.dark-mode #background-fetch {
+  background: rgba(0, 0, 0, 0.5);
+}
 .popup-div {
   display: flex;
   justify-content: left;
