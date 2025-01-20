@@ -56,10 +56,12 @@ export const LoginPage = () => {
       setErrors({});
       try {
         // Próba logowania w Firebase
-        const userData = await doSignInWithEmailAndPassword(formData.email, formData.password);
+        const userCredential = await doSignInWithEmailAndPassword(formData.email, formData.password);
+        const displayName = userCredential.user.displayName;
 
         alert("Zalogowano pomyślnie");
-        setUserData({ name: "Imię", lastname: "Nazwisko" });
+        const [firstName, lastName] = (displayName || "Unknown User").split(" ");
+        setUserData({ name: firstName, lastname: lastName });
         navigate("/");
       } catch (error) {
         setErrors({ email: "Nieprawidłowe dane logowania." });
